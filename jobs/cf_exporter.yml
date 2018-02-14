@@ -2,7 +2,7 @@ name: cf_exporter
 release: prometheus
 manifest: |
   cf_exporter:
-    skip_ssl_verify: true # TODO: verify certs
+    skip_ssl_verify: (( ..cf.ha_proxy.skip_cert_verify.value ))
     cf:
       api_url: https://api.(( ..cf.cloud_controller.system_domain.value ))
       client_id: (( ..cf.uaa.healthwatch_firehose_credentials.identity ))
