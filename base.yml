@@ -23,4 +23,8 @@ job_types:
 
 property_blueprints:
 - $( property "grafana_admin_credentials" )
+- $( property "grafana_allow_anonymous_viewer_access" )
 - $( property "prometheus_admin_credentials" )
+
+form_types:
+- $( form "prometheus" )

@@ -1,0 +1,7 @@
+name: prometheus
+label: Prometheus
+description: Configure Prometheus + Grafana
+property_inputs:
+- reference: .properties.allow_anonymous_viewer_access
+  label: Allow Anonymous Viewer Access
+  description: If checked, users will not be prompted for a password when trying to view Grafana dashboards.

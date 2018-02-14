@@ -1,0 +1,4 @@
+name: grafana_allow_anonymous_viewer_access
+type: boolean
+configurable: true
+default: true

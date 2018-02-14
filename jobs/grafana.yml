@@ -7,9 +7,8 @@ manifest: |
     security:
       admin_password: (( .properties.grafana_admin_credentials.password ))
     auth:
-      # TODO: make this configurable
       anonymous:
-        enabled: true
+        enabled: (( .properties.grafana_allow_anonymous_viewer_access ))
         org_role: Viewer
     users:
       allow_sign_up: false
