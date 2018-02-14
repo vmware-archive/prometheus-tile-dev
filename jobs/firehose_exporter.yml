@@ -1,0 +1,13 @@
+name: firehose_exporter
+release: prometheus
+manifest: |
+  firehose_exporter:
+    skip_ssl_verify: true # TODO: verify certs
+    uaa:
+      url: https://login.(( ..cf.cloud_controller.system_domain.value ))
+      client_id: (( ..cf.uaa.healthwatch_firehose_credentials.identity ))
+      client_secret: (( ..cf.uaa.healthwatch_firehose_credentials.password ))
+    doppler:
+      url: wss://doppler.(( ..cf.cloud_controller.system_domain.value )):(( ..cf.properties.logger_endpoint_port.value || "443" ))
+    metrics:
+      environment: (( ..cf.cloud_controller.system_domain.value ))

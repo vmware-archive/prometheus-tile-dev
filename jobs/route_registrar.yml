@@ -1,0 +1,17 @@
+name: route_registrar
+release: routing
+consumes: |
+  nats: {from: nats, deployment: (( ..cf.deployment_name ))}
+manifest: |
+  route_registrar:
+    routes:
+    - name: prometheus
+      port: 9090
+      registration_interval: 20s
+      uris:
+      - prometheus.(( ..cf.cloud_controller.system_domain.value ))
+    - name: grafana
+      port: 3000
+      registration_interval: 20s
+      uris:
+      - grafana.(( ..cf.cloud_controller.system_domain.value ))

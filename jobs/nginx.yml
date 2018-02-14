@@ -1,0 +1,7 @@
+name: nginx
+release: prometheus
+manifest: |
+  nginx:
+    prometheus:
+      auth_username: (( .properties.prometheus_admin_credentials.identity ))
+      auth_password: (( .properties.prometheus_admin_credentials.password ))

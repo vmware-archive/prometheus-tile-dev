@@ -1,0 +1,3 @@
+/stemcell/*
+/releases/*
+*.pivotal

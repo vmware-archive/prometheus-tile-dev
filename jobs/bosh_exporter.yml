@@ -1,0 +1,13 @@
+name: bosh_exporter
+release: prometheus
+manifest: |
+  bosh_exporter:
+    bosh:
+      url: https://(( $director.deployment_ip )):25555
+      ca_cert: (( $director.ca_public_key ))
+      uaa:
+        url: https://(( $director.deployment_ip )):8443
+        client_id: (( ..p-bosh.director.health_monitor_credentials.identity ))
+        client_secret: (( ..p-bosh.director.health_monitor_credentials.password ))
+    metrics:
+      environment: (( ..cf.cloud_controller.system_domain.value ))

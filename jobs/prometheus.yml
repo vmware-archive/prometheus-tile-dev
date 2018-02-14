@@ -1,0 +1,27 @@
+name: prometheus
+release: prometheus
+manifest: |
+  prometheus:
+    web:
+      port: 9191 # allow nginx to serve all traffic
+    scrape_configs:
+      - job_name: prometheus
+        static_configs:
+          - targets:
+            - localhost:9191
+      - job_name: bosh
+        scrape_interval: 1m
+        scrape_timeout: 1m
+        static_configs:
+          - targets:
+            - localhost:9190
+      - job_name: firehose
+        static_configs:
+          - targets:
+            - localhost:9186
+      - job_name: cf
+        scrape_interval: 2m
+        scrape_timeout: 2m
+        static_configs:
+          - targets:
+            - localhost:9193

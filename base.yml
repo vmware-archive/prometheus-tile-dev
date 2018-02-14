@@ -1,0 +1,26 @@
+---
+name: prometheus-dev
+label: Prometheus (Dev)
+description: Provides Prometheus to aggregate metrics and Grafana to graph metrics. Intended for non-production environments.
+
+metadata_version: "1.9"
+product_version: $( version )
+minimum_version_for_upgrade: 0.0.1
+
+icon_image: $( icon )
+
+rank: 1
+serial: false
+
+releases:
+- $( release "prometheus" )
+- $( release "routing" )
+
+stemcell_criteria: $( stemcell )
+
+job_types:
+- $( instance_group "prometheus" )
+
+property_blueprints:
+- $( property "grafana_admin_credentials" )
+- $( property "prometheus_admin_credentials" )

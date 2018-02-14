@@ -1,0 +1,12 @@
+name: cf_exporter
+release: prometheus
+manifest: |
+  cf_exporter:
+    skip_ssl_verify: true # TODO: verify certs
+    cf:
+      api_url: https://api.(( ..cf.cloud_controller.system_domain.value ))
+      client_id: (( ..cf.uaa.healthwatch_firehose_credentials.identity ))
+      client_secret: (( ..cf.uaa.healthwatch_firehose_credentials.password ))
+      deployment_name: cf
+    metrics:
+      environment: (( ..cf.cloud_controller.system_domain.value ))
