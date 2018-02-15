@@ -37,6 +37,29 @@ default: |
     "rows": [
       {
         "collapse": false,
+        "height": "",
+        "panels": [
+          {
+            "content": "<div style=\"font-style: normal; font-weight: 600; font-size: 6rem;\">$environment</div>",
+            "height": "50px",
+            "id": 6,
+            "links": [],
+            "mode": "html",
+            "span": 12,
+            "title": "",
+            "transparent": true,
+            "type": "text"
+          }
+        ],
+        "repeat": null,
+        "repeatIteration": null,
+        "repeatRowId": null,
+        "showTitle": false,
+        "title": "Dashboard Row",
+        "titleSize": "h6"
+      },
+      {
+        "collapse": false,
         "height": "200px",
         "panels": [
           {
