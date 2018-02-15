@@ -50,6 +50,7 @@ fi
 
 kiln bake \
   --icon "${tile_dir}/icon.png" \
+  --forms-directory "${tile_dir}/forms" \
   --instance-groups-directory "${tile_dir}/instance-groups" \
   --jobs-directory "${tile_dir}/jobs" \
   --properties-directory "${tile_dir}/properties" \

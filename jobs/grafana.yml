@@ -8,7 +8,7 @@ manifest: |
       admin_password: (( .properties.grafana_admin_credentials.password ))
     auth:
       anonymous:
-        enabled: (( .properties.grafana_allow_anonymous_viewer_access ))
+        enabled: (( .properties.grafana_allow_anonymous_viewer_access.value ))
         org_role: Viewer
     users:
       allow_sign_up: false
@@ -17,6 +17,7 @@ manifest: |
     dashboards:
       json:
         enabled: true
+      custom_homepage_json: (( .properties.grafana_custom_homepage.value ))
     prometheus:
       dashboard_files:
         - /var/vcap/jobs/prometheus_dashboards/*.json
