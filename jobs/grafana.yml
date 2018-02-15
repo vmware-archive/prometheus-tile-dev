@@ -20,7 +20,6 @@ manifest: |
       custom_homepage_json: (( .properties.grafana_custom_homepage.value ))
     prometheus:
       dashboard_files:
-        - /var/vcap/jobs/system_dashboards/*.json
         - /var/vcap/jobs/prometheus_dashboards/*.json
         - /var/vcap/jobs/bosh_dashboards/*.json
         - /var/vcap/jobs/cloudfoundry_dashboards/*.json

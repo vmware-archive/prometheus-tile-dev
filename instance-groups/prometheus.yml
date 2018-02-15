@@ -11,7 +11,6 @@ templates:
 - $( job "prometheus_dashboards" )
 - $( job "bosh_dashboards" )
 - $( job "cloudfoundry_dashboards" )
-- $( job "system_dashboards" )
 - $( job "grafana" )
 - $( job "nginx" )
 - $( job "route_registrar" )
