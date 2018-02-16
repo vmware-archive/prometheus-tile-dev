@@ -13,7 +13,6 @@ manifest: |
     users:
       allow_sign_up: false
       allow_org_create: false
-    # TODO: allow operator to configure custom home dashboard
     dashboards:
       json:
         enabled: true
