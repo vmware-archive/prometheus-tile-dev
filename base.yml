@@ -3,9 +3,10 @@ name: prometheus-dev
 label: Prometheus (Dev)
 description: Provides Prometheus to aggregate metrics and Grafana to graph metrics. Intended for non-production environments.
 
-metadata_version: "1.9"
+# requires PAS 1.11 or higher as this tile leverages the healthwatch_firehose UAA client
+metadata_version: "1.11"
 product_version: $( version )
-minimum_version_for_upgrade: 0.0.1
+minimum_version_for_upgrade: 0
 
 icon_image: $( icon )
 

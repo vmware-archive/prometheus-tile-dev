@@ -11,6 +11,11 @@ Our intended use case is to run a single-VM prometheus to monitor our CI environ
 A single VM containing Prometheus to aggregate metrics and Grafana to graph them.
 A large number of dashboards for BOSH, Cloud Foundry, and Prometheus itself come pre-installed.
 
+## Dependencies
+
+Requires ERT 1.11 or later in order to leverage the `healthwatch_firehose` UAA client.
+This is required as OpsMgr does not allow tiles to add their own CF UAA clients.
+
 ## How do I use it?
 
 View graphs:
